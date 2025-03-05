@@ -1,5 +1,5 @@
 import validator from "validator";
-import bcrypt from "bcrypt js";
+import bcryptjs from "bcryptjs"
 import studentModel from "../models/studentModel.js";
 import jwt from "jsonwebtoken";
 import { v2 as cloudinary } from "cloudinary";
@@ -24,7 +24,7 @@ const registerStudent = async (req, res) => {
         }
         //hashing user password
         const salt = await bcrypt.genSalt(10);
-        const hashedPassword = await bcrypt.hash(password, salt);
+        const hashedPassword = await bcryptjs.hash(password, salt);
 
         const studentData = {
             name,
