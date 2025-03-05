@@ -36,7 +36,7 @@ import Therapists  from './Therapists .svg'
 import Psychologists  from './Psychologists .svg'
 import Counselors from './Counselors.svg'
 import Psychoanalysts from './Psychoanalysts.svg'
-import AddictionCounselors  from './Addiction Counselors .svg'
+import AddictionCounselors  from './Addiction counselors .svg'
 
 
 export const assets = {
