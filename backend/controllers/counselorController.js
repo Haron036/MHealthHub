@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"; // ✅ Correct
 import counselorModel from "../models/counselorModel.js";
-import bcrypt from "bcrypt";
+import bcryptjs from "bcryptjs";
 import appointmentModel from "../models/appointmentModel.js";
 
 const changeAvailability = async (req, res) => {
@@ -37,7 +37,7 @@ const loginCounselor = async (req, res) => {
       return res.json({ success: false, message: "Invalid credentials" });
     }
 
-    const isMatch = await bcrypt.compare(password, counselor.password);
+    const isMatch = await bcryptjs.compare(password, counselor.password);
 
     if (isMatch) {
       const token = jwt.sign({ id: counselor._id }, process.env.JWT_SECRET);
