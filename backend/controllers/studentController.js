@@ -51,7 +51,7 @@ const loginStudent = async (req, res) => {
         if (!student) {
             return res.json({ success: false, message: "User does not exist" });
         }
-        const isMatch = await bcrypt.compare(password, student.password);
+        const isMatch = await bcryptjs.compare(password, student.password);
         if (isMatch) {
             const token = jwt.sign({ id: student._id }, process.env.JWT_SECRET);
             res.json({ success: true, token });
