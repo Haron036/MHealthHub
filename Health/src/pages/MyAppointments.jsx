@@ -79,7 +79,7 @@ toast.error(error.message)
               </div>
               <div></div>
               <div className='flex flex-col gap-2 justify-end'> 
-              { !item.cancelled && !item.isCompleted&&<button onClick={()=>cancelAppointment(item._id)} className='text-sm text-black text-center sm:min-w-48 py-2 border  cursor-pointer hover:bg-red-600 hover :text-white transition-all duration-300 '> Cancel  appointment</button>}
+              { !item.cancelled && !item.isCompleted&&<button onClick={()=>cancelAppointment(item._id)} className='text-sm text-black text-center sm:min-w-48 py-2 border rounded hover:bg-red-600 hover :text-white transition-all duration-300 cursor-pointer'> Cancel  appointment</button>}
               {item.cancelled && !item.isCompleted&&<button className='sm:min-w-48 py-2 border border-red-500 rounded text-red-500'>Appointment cancelled</button>}
               {item.isCompleted && <button className='sm:min-w-48 py-2 border border-green-500 rounded text-green-500'>Completed</button>}
               </div>
