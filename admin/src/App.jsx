@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Admin/Dashboard";
 import AllAppointments from "./pages/Admin/AllAppointments";
 import AddCounselor from "./pages/Admin/AddCounselor";
-import CouselorsList from "./pages/Admin/CouselorsList";
+import CounselorsList from "./pages/Admin/CounselorsList";
 import { CounselorContext } from "./context/CounselorContext";
 import CounselorDashboard from "./pages/Counselor/CounselorDashboard";
 import CounselorAppointment from "./pages/Counselor/CounselorAppointment";
@@ -31,7 +31,7 @@ const App = () => {
           <Route path="/admin-dashboard" element={<Dashboard />} />
           <Route path="/all-appointments" element={<AllAppointments />} />
           <Route path="/add-counselor" element={<AddCounselor />} />
-          <Route path="/counselor-list" element={<CouselorsList />} />
+          <Route path="/counselor-list" element={<CounselorsList />} />
 
           {/* Counselor Route*/}
           <Route path="/counselor-dashboard" element={<CounselorDashboard />} />
