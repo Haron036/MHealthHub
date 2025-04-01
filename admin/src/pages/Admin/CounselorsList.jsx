@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { AdminContext } from '../../context/AdminContext'
 
-const CouselorsList = () => {
+const CounselorsList = () => {
   const {counselors,aToken,getAllCounselors,changeAvailability} = useContext(AdminContext)
 
   useEffect(()=>{
@@ -34,4 +34,4 @@ const CouselorsList = () => {
   )
 }
 
-export default CouselorsList
+export default CounselorsList
